@@ -1,5 +1,5 @@
 ![vimplus-logo][1]
-
+修改为支持最新版的VIM
 An automatic configuration program for vim
 ===============================================
 
