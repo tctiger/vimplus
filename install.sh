@@ -262,9 +262,9 @@ function compile_vim_on_centos()
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
-    rm -rf ~/vim82
+    rm -rf ~/vim9
     git clone https://github.com/vim/vim.git ~/vim9
-    cd ~/vim82
+    cd ~/vim9
     ./configure --with-features=huge \
         --enable-multibyte \
         --with-tlib=tinfo \
