@@ -174,7 +174,7 @@ function is_macos1014()
     fi
 }
 
-# 在alpine上直装vim8.2
+# 在alpine上直装vim9
 # function compile_vim_on_alpine()
 # {
 #     apk --upgrade add vim
@@ -188,13 +188,14 @@ function compile_vim_on_ubuntu()
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim9
+    git clone https://github.com/vim/vim.git ~/vim9
+    cd ~/vim9
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -210,13 +211,14 @@ function compile_vim_on_debian()
 {
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim9
+    git clone https://github.com/vim/vim.git ~/vim9
+    cd ~/vim9
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -232,13 +234,14 @@ function compile_vim_on_parrot()
 {
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 vim
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim9
+    git clone https://github.com/vim/vim.git ~/vim9
+    cd ~/vim9
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
         --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -260,13 +263,14 @@ function compile_vim_on_centos()
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
     rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    git clone https://github.com/vim/vim.git ~/vim9
     cd ~/vim82
     ./configure --with-features=huge \
         --enable-multibyte \
         --with-tlib=tinfo \
         --enable-rubyinterp=yes \
         --enable-pythoninterp=yes \
+        --enable-python3interp \
         --enable-perlinterp=yes \
         --enable-luainterp=yes \
         --enable-gui=gtk2 \
@@ -487,7 +491,7 @@ function install_vim_plugin()
 # 安装ycm插件
 function install_ycm()
 {
-    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
+    git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
     distro=`get_linux_distro`
@@ -538,7 +542,7 @@ function install_ycm()
 # 在android上安装ycm插件
 function install_ycm_on_android()
 {
-    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
+    git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/plugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
 
