@@ -188,13 +188,13 @@ function compile_vim_on_ubuntu()
         libgtk2.0-dev libatk1.0-dev libbonoboui2-dev \
         libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 lua5.1-dev
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
+    rm -rf ~/vim91
+    git clone https://github.com/vim/vim.git ~/vim91
     cd ~/vim82
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
-        --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -232,13 +232,13 @@ function compile_vim_on_parrot()
 {
     sudo apt-get install -y libncurses5-dev libncurses5 libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev python-dev python3-dev ruby-dev lua5.1 vim
 
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim91
+    git clone https://github.com/vim/vim.git ~/vim91
+    cd ~/vim91
     ./configure --with-features=huge \
         --enable-multibyte \
         --enable-rubyinterp \
-        --enable-pythoninterp \
+        --enable-python3interp \
         --enable-perlinterp \
         --enable-luainterp \
         --enable-gui=gtk2 \
@@ -259,9 +259,9 @@ function compile_vim_on_centos()
         perl-ExtUtils-XSpp perl-ExtUtils-CBuilder \
         perl-ExtUtils-Embed libX11-devel ncurses-devel
     
-    rm -rf ~/vim82
-    git clone https://gitee.com/chxuan/vim82.git ~/vim82
-    cd ~/vim82
+    rm -rf ~/vim91
+    git clone https://github.com/vim/vim.git ~/vim91
+    cd ~/vim91
     ./configure --with-features=huge \
         --enable-multibyte \
         --with-tlib=tinfo \
@@ -487,7 +487,7 @@ function install_vim_plugin()
 # 安装ycm插件
 function install_ycm()
 {
-u#    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
+#    git clone https://gitee.com/chxuan/YouCompleteMe-clang.git ~/.vim/plugged/YouCompleteMe
     git clone https://github.com/ycm-core/YouCompleteMe.git ~/.vim/olugged/YouCompleteMe
 
     cd ~/.vim/plugged/YouCompleteMe
