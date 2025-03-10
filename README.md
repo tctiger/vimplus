@@ -26,6 +26,7 @@ An automatic configuration program for vim
 
     git clone https://github.com/chxuan/vimplus.git ~/.vimplus
     新：git clone https://github.com/tctiger/vimplus.git ~/.vimplus
+    cd ~/.vimplus
     ./install.sh
     
 注: apline用户请预先安装git,bash: apk add git bash  
